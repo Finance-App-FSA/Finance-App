@@ -1,35 +1,27 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import Navbar from 'react-bootstrap/Navbar'
+import Button from 'react-bootstrap/Button'
+import Nav from 'react-bootstrap/Nav'
+import Form from 'react-bootstrap/Form'
+import FormControl from 'react-bootstrap/FormControl'
 
-export default class Navbar extends Component {
-  constructor() {
-    super()
-    this.state = {
-      company: ''
-    }
-  }
-
-  handleChange = event => {
-    this.setState({[event.target.name]: event.target.value})
-  }
-
-  handleSubmit = event => {
-    event.preventDefault()
-  }
-
+export default class NavigationBar extends Component {
   render() {
     return (
-      <div>
-        <div className="search-box">
-          <input
-            className="search-txt"
-            type="text"
-            name=""
-            value=""
-            placeholder="Company Name"
-          />
-        </div>
-      </div>
+      <>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="#home">Home</Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">Order History</Nav.Link>
+            <Nav.Link href="#features">Account</Nav.Link>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-info">Search</Button>
+          </Form>
+        </Navbar>
+        <br />
+      </>
     )
   }
 }

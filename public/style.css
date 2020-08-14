@@ -1,7 +1,15 @@
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
 body {
   font-family: sans-serif;
-
-  background: lightgray;
+  background: linear-gradient(-70deg, #020751 30%, black);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
 }
 
 a {
