@@ -14,6 +14,7 @@ class CompanyInfo extends React.Component {
   render() {
     let articles = this.props.articles || []
     console.log('this is articles', articles)
+    console.log('this is props', this.props)
 
     return (
       <div>
