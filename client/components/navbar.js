@@ -6,9 +6,15 @@ import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 
 export default class NavigationBar extends Component {
+  constructor() {
+    super()
+    this.state = {
+      company: ''
+    }
+  }
   render() {
     return (
-      <>
+      <div>
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="#home">Home</Navbar.Brand>
           <Nav className="mr-auto">
@@ -21,7 +27,7 @@ export default class NavigationBar extends Component {
           </Form>
         </Navbar>
         <br />
-      </>
+      </div>
     )
   }
 }
